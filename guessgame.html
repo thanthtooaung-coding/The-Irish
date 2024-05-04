@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        /*#level-1{
+            display: none;
+        }*/
+        #level-1 h1 {
+            color: #369;
+        }
+        
+        #level-1 .container {
+            margin-top: 50px;
+        }
+        
+        #level-1 .input-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        #level-1 .input-group input {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #369;
+            border-radius: 4px;
+            font-size: 16px;
+            outline: none;
+            display: none;
+        }
+        
+        #level-1 .input-group button {     
+            display: none;       
+            background-color: #369;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin-left: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        #level-1 #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #369;
+        }
+        
+        #level-1 #NextDiv {
+            margin-top: 20px;
+        }
+        
+        #level-1 #NextDiv button {
+            background-color: #369;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        /*#level-1 #number-game {
+            display: none;
+        }*/
+        
+        /* CSS for Cup Game */
+        #Button-2{
+            display: none;            
+
+        }
+        #level-2 body {
+            text-align: center;
+        }
+
+        #level-2 h1 {
+            font-family: Arial, sans-serif;
+        }
+
+        #level-2 #cup-container {
+            margin-top: 50px;            
+        }
+        
+        #level-2 .cup {
+            display: inline-block;
+            width: 120px;
+            height: 180px;
+            background-color: #eaeaea;
+            border: 2px solid #888888;
+            margin: 0 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #level-2 #button{
+            display: none;
+        }
+
+        #level-2 #restart-button{
+            display: none;
+        }
+        #level-2 #start-button, #restart-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }        
+    </style>
+</head>
+<body>
+    <button onclick="showLevel1()" id="Button-1">Click to open Level 1</button>   
+    <div id="level-1" class="level">
+        <div class="container" id="number-game">
+            <h1 id="numheading"></h1>
+            
+            <p id="NumPara"></p>
+            <div class="input-group">
+                <input type="text" id="guessInput">
+                <button id="guessButton">Guess</button>
+            </div>
+            <p id="result"></p>
+            <div id="NextDiv" style="display: none;">
+                <button id="NextButton">Next</button>
+            </div>
+        </div>
+    </div>    
+    <div id="level-2" class="level">
+        <button onclick="showLevel2()" id="Button-2">Click to open Level 2</button>
+        <h1 id="cupheading"></h1>
+        <div id="cup-container">
+            <div class="cup"></div>
+            <div class="cup"></div>
+            <div class="cup"></div>
+        </div>
+        <div id="button">
+            <button id="start-button">Start Game</button>
+            <button id="restart-button">Restart</button>
+        </div>        
+    </div>
+    </body>
+    <script>
+        //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter
+        //Level-1
+        var Button_1 = document.getElementById('Button-1');
+        var Button_2 = document.getElementById('Button-2');
+        var level_1 = document.getElementById('level-1')
+        var level_2 = document.getElementById('level-2')
+        var cup_container = document.getElementById('cup-container');
+        var level_2_button = document.getElementById('button')
+        var i = 0;
+        var NumGuessheading = 'Number Guessing Game';
+        var NumPara = 'Guess a number between 1 and 100';
+        var speed = 50;
+        var all_length = NumGuessheading.length + NumPara.length;        
+        NumGameWin = false;
+        function showNumberGuessHeadings() {
+            if (i < all_length) {
+                if (i < NumGuessheading.length) {
+                    document.getElementById("numheading").innerHTML += NumGuessheading.charAt(i);
+                }
+                if (i >= NumGuessheading.length) {
+                    document.getElementById("NumPara").innerHTML += NumPara.charAt(i - NumGuessheading.length);
+                }
+                i++;
+                setTimeout(showLevel1, speed);
+                if (i === all_length) {
+                    showNumGuessInput(); // Call the showInput function when all characters are displayed
+                }
+            }
+        }
+        function showLevel1(){
+            showNumberGuessHeadings();                        
+        }
+        function showNumGuessInput(){
+            var NumGuessInput = document.getElementById('guessInput');
+            var NumGuessButton = document.getElementById('guessButton');
+            NumGuessInput.style.display = 'block';
+            NumGuessButton.style.display = 'block';
+        }
+        let answer;
+        let attempts = 0;
+
+        function startGame() {
+            answer = Math.floor(Math.random() * 100) + 1;
+            document.getElementById("guessInput").value = "";
+            document.getElementById("result").textContent = "";
+            document.getElementById("guessButton").disabled = false;
+            document.getElementById("NextDiv").style.display = "none";
+            attempts = 0;
+        }
+
+        function checkGuess() {
+            const guess = parseInt(document.getElementById("guessInput").value);
+            const result = document.getElementById("result");
+            if (isNaN(guess) || guess < 1 || guess > 100) {
+                result.textContent = "Please enter a valid number between 1 and 100.";
+            } else if (guess === answer) {
+                attempts++;
+                result.textContent = `Congratulations! You guessed the number in ${attempts} attempts.`;
+                document.getElementById("guessButton").disabled = true;                
+                NumGameWin = true;
+                document.getElementById("NextDiv").style.display = "block";
+                //Button_2.style.display = 'block';
+            } else if (guess < answer) {
+                attempts++;
+                result.textContent = "Too low. Guess again.";
+            } else if (guess > answer) {
+                attempts++;
+                result.textContent = "Too high. Guess again.";
+            }
+            document.getElementById("guessInput").value = "";
+            document.getElementById("guessInput").focus();
+        }
+
+        document.getElementById("guessButton").addEventListener("click", checkGuess);
+        document.getElementById("NextButton").addEventListener("click", showLevel2);
+
+        startGame();        
+        //Level-2        
+        var speed = 50;
+        var j = 0;
+        var CupGameheading = 'Cup Guessing Game';        
+        function showCupGameHeadings() {
+            if (j < CupGameheading.length) {                
+                document.getElementById("cupheading").innerHTML += CupGameheading.charAt(j);
+                j++;
+                setTimeout(showCupGameHeadings, speed);                
+            }
+            if(j === CupGameheading.length){
+                setTimeout(showcups, speed);
+            }
+        }
+        function showLevel2(){         
+            level_1.style.display = 'none';
+            showCupGameHeadings();                                                
+        }    
+        function showcups() {
+            var cups = document.getElementsByClassName('cup');
+            var i = 0;            
+            function displayNextCup() {
+                if (i < cups.length) {
+                    //cups[i].style.display = 'block';
+                    cups[i].style.display = 'inline-block';
+                    i++;
+                    setTimeout(displayNextCup, speed);
+                }
+            }
+          
+            displayNextCup();
+        }        
+    </script>
+</html>

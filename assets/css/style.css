@@ -1,0 +1,107 @@
+body {
+    background-color: #f8f9fa;
+}
+.navbar-brand {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+#navbar li{
+    padding-left: 30px;
+}
+main section h2{
+    font-weight: 700;
+}
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff;
+    }
+    to {
+        text-shadow: 0 0 10px #fff;
+    }
+}
+.cv-form p {
+    font-size: 18px;
+}
+main .row i{            
+    font-size: 24px;            
+    color: blue;
+}
+.section-header{
+    justify-content: center;
+}
+.social-icons a {
+    padding-left: 20px;            
+    color: white;
+}
+
+.social-icons i {
+    width: 45px;
+    padding: 10px 13px;
+}
+
+.social-icons i:hover {
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    padding: 10px 13px;
+    border: 1px solid black;
+}               
+
+#youtube:hover {
+    color: #c4302b;
+}
+
+#github:hover {
+    color: #171515;
+}
+
+#twitter:hover {
+    color: #00acce;
+}
+
+#instagram:hover {
+    color: #E4405F;
+}
+
+#facebook:hover {
+    color: #3b5998;
+}
+.about-me-title {
+    text-align: center;
+}
+/* Back to top button*/
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0.8;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #007bff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #2990ff;
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+.checked {
+    color: orange;
+}

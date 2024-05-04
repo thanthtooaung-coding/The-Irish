@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;            
+}
+
+p{
+    height: 70px;
+    padding-bottom: 10px;            
+}
+#game{                           
+    /*https://colorcodefinder.com/   Take color from image with this link */
+    /*background-color: #f8a2dd;*/
+    /*background-image: url('https://media2.giphy.com/media/116n6kcHaFbw3e/giphy.gif?cid=ecf05e47ctbt88zrrn6kmd6pboenxz8mm3osu5vhd75ykxfx&ep=v1_gifs_search&rid=giphy.gif&ct=g');*/
+    /*background-image: url('https://media3.giphy.com/media/DfujerC1Psq2pbpGsg/200w.webp?cid=ecf05e47ma8gce4xc54ajcn34mj3dxy7t3j6bcfilnde7rz9&ep=v1_gifs_search&rid=200w.webp&ct=g');*/
+    /*background-image: url('https://64.media.tumblr.com/dbdd01587994e68f6183cc2b08c567db/1bfea5a4c4c9fc1b-19/s640x960/5ebd48c82eeabc0b4c3a1fa01c681238ac90ec43.gif');*/
+    /*background-image: url('https://i.pinimg.com/originals/3e/89/27/3e8927d5bfd90c58126763e995a84449.gif');*/
+    /*background-image: url('https://i.pinimg.com/originals/fe/b3/52/feb35209ae4441803b3d91885731a128.gif');*/
+    /*background-image: url('https://i.pinimg.com/originals/a6/76/a5/a676a5bf5108be4e8090d4f73a0ecafd.gif'); one piece*/
+    
+    border-style: double;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    /*background-color: skyblue;
+    /*background-color: rgb(255, 120, 226);*/
+    /*width: 600px;
+    height: 338px;*/
+    
+                
+}
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;            
+    padding-bottom: 50px;
+}
+.button button{
+    margin-left: 50px;
+    
+}
+#character img{                        
+    width: 50px;
+    height: 50px;            
+    position: relative;            
+    top: 250px;        
+    border-radius: 50%;    
+}
+.coin {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: gold;
+    /*background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbZWQ58P7TLGyiyTYJDgyYF9DwEbFyGgW-v0ecrHrUJw&s');*/
+    /*background-size: 50px 50px;*/
+    position: absolute;
+    /*animation: laptopBlock 3s infinite;*/
+    /*animation: coinAnimate 1s infinite;*/
+}
+/* animate class create by JS */
+.stop-coin {
+    animation: none !important;
+}
+.animate{
+    animation: jump 1000ms infinite;
+}
+.laptopAnimate{
+    animation: Laptopjump 500ms infinite;
+}
+@keyframes coinAnimate {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
+#block{
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    top: 227px;
+    left: 580px;
+}
+.start{
+    animation: block 2s infinite;
+}
+.phoneStart{
+    animation: phoneBlock 2s infinite;
+}             
+.laptopStart{
+    animation: laptopBlock 2s infinite;
+}                
+.phoneCoin{
+    animation: phoneBlock 3s infinite;
+}
+.laptopCoin{
+    animation: laptopBlock 3s infinite;
+}
+/*Animation Test*/
+/* right to left */
+@keyframes block{
+    0%{left: 580px;}
+    100%{left: -40px;}
+}
+@keyframes phoneBlock{
+    0%{left: 380px;}
+    100%{left: -40px;}
+}
+@keyframes laptopBlock{
+    0%{left: 1280px;}
+    100%{left: -40px;}
+}
+@keyframes jump{
+    0%{top: 250px}
+    30%{top: 200px;}/* Stay in air between 30% and 70% */
+    70%{top: 200px;}
+    100%{top: 250px}
+}
+@keyframes Laptopjump{
+    0%{top: 300px}
+    30%{top: 250px;}/* Stay in air between 30% and 70% */
+    70%{top: 250px;}
+    100%{top: 300px}
+}
+button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-pause-button,
+video::-webkit-media-controls-fullscreen-button {
+    display: none !important;
+}
+/*Phone size */
+@media (max-width: 768px) {
+    
+    #game {
+        margin-left: 0px;
+        width: 600px;
+        height: 398px;
+        border-radius: 0px 5px 0 0;      
+        /*background-color: #f8a2dd;*/
+        background-image: url('../images/sea.gif');
+    }
+    #block {
+        left: 380px;
+        top: 237px;
+        height: 50px;
+    }
+    #character img {
+        height: 70px;
+        width: 80px;
+        top: 280px;
+    }
+    #jumpButton {
+        display: block;
+    }
+    #vdo {
+        display: none;
+    }
+    #LaptopstartGame{
+        display: none;
+    }
+    #lo{
+        display: none;
+    }
+}
+
+/* Laptop size */
+@media (min-width: 769px) {            
+    #game {        
+        margin-left: 30px;    
+        width: 1300px;
+        height: 438px;   
+        background-image: url('../images/s.gif');
+    }
+    #block {
+        left: 1280px;
+        top: 237px;
+        height: 60px;
+    }
+    #character img {
+        height: 100px;
+        width: 100px;
+        top: 291px;
+    }
+    #jumpButton {
+        display: none;
+    }
+    #PhonestartGame{
+        display: none;
+    }
+    #p{
+        display: none;
+    }
+}   

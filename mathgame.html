@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Math Game</title>
+        <link rel="stylesheet" href="assets/css/mathGame.css">
+    </head>    
+    <body>
+        <form class="form" id="form">            
+            <div class="top">
+                <h3 class="time" id="time">Time : 00:00</h3>
+                <h3 class="score" id="score">Score : 0</h3>
+            </div>
+            <h1 id="question"></h1>
+            <input type="text" class="input" id="input" placeholder="Enter your answer" autocomplete="off" autofocus>            
+            <div id="error" class="error"></div>
+            <button type="submit" class="btn" onclick="checkAnswer()">Submit</button>
+            
+        </form>        
+        <script src="assets/js/mathGame.js"></script>
+    </body>
+</html>

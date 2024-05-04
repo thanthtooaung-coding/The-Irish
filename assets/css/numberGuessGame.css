@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #369;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.input-group input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #369;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group button {
+    background-color: #369;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #369;
+}
+
+#restartDiv {
+    margin-top: 20px;
+}
+
+#restartDiv button {
+    background-color: #369;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

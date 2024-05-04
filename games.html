@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Irish.</title>
+    <!-- https://cdnjs.com/libraries/jquery (JQuery cdn)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">        
+    <!-- https://blog.getbootstrap.com/2021/01/07/bootstrap-icons-1-3-0/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Jquery -->    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="assets/js/scrollToTop.js"></script>
+
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container pt-2 pb-2 col-12">
+                <a class="navbar-brand" href="#">The Irish.</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto col-sm col-lg-7">
+                        <li class="nav-item pr-5">
+                            <a class="nav-link" href="homepage.html">Home</a>
+                        </li>
+                        <li class="nav-item active pr-5">
+                            <a class="nav-link" href="games.html">Games</a>
+                        </li>
+                        <li class="nav-item pr-5">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item pr-5">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>                                        
+                    <a class="nav-link d-none d-lg-inline btn" id="signin" href="login.html" style="color: white; background-color:#3ded97;">Sign in</a>
+                    
+                </div>
+                <!-- <a class="nav-link d-lg-none" href="#">Sign in</a> -->
+            </div>
+        </nav>
+    </header>
+
+    <main style="background: white;">
+        <section class="section pt-5">
+            
+            <div class="row mb-5 ml-5">
+                <div class="col-md-12 text-center">
+                    <h2>Game Reviews</h2>
+                </div>
+            </div>     
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="assets/images/Tic Tac Toe.jpg" class="card-img" alt="Game Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Tic Tac Toe Game</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Genre: Two Players Game</h6>
+                            <p class="card-text">Tic Tac Toe is a classic game that has stood the test of time. It is a simple yet challenging game that can be enjoyed by players of all ages. <a href="Tic_Tac_Toe_Review.html">Read more...</a></p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="rating">
+                                        <h6>Rating:</h6>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>                                        
+                                        <i class="fas fa-star" style="color: black;"></i>
+                                        <i class="fas fa-star" style="color: black;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="comment">                    
+                                        <div class="mb-3 mt-3">
+                                            <label for="comment">Comments:</label>
+                                            <textarea class="form-control" name="" id="" rows="5"></textarea><br>
+                                            <button type="submit" class="btn btn-primary">Submit</button>   
+                                            <button type="submit" class="btn btn-primary"><a href="tic.html" style="color: white;text-decoration: none;">Play Now</a></button>            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="assets/images/NumberGuessGame.png" class="card-img" alt="Game Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Guessing Game</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Genre: Guess Game</h6>
+                            <p class="card-text">Guessing Game is an engaging and enjoyable game that offers two exciting levels of guessing challenges. <a href="Guess_Game_Review.html">Read more...</a></p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="rating">
+                                        <h6>Rating:</h6>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>                                        
+                                        <i class="fas fa-star" style="color: black;"></i>
+                                        <i class="fas fa-star" style="color: black;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="comment">                    
+                                        <div class="mb-3 mt-3">
+                                            <label for="comment">Comments:</label>
+                                            <textarea class="form-control" name="" id="" rows="5"></textarea><br>
+                                            <button type="submit" class="btn btn-primary">Submit</button>   
+                                            <button type="submit" class="btn btn-primary"><a href="guessgame.html" style="color: white;text-decoration: none;">Play Now</a></button>            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="assets/images/cardsgame.png" class="card-img" alt="Game Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card Matching Game</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Genre: Memory Card Game</h6>
+                        <p class="card-text">Card Game is a fantastic flip card memory game that will test your memory and concentration skills. The objective of the game is to flip over pairs of cards and match them with their corresponding counterparts. <a href="Card_Game_Review.html">Read more...</a></p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="rating">
+                                        <h6>Rating:</h6>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>                                        
+                                        <i class="fas fa-star checked" style="color: orange;"></i>      
+                                        <i class="fas fa-star" style="color: black;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="comment">                    
+                                        <div class="mb-3 mt-3">
+                                            <label for="comment">Comments:</label>
+                                            <textarea class="form-control" name="" id="" rows="5"></textarea><br>
+                                            <button type="submit" class="btn btn-primary">Submit</button>   
+                                            <button type="submit" class="btn btn-primary"><a href="Card Game.html" style="color: white;text-decoration: none;">Play Now</a></button>            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="assets/images/City Guess.png" class="card-img" alt="Game Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">City Guessing Game</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Genre: Guess Game</h6>
+                            <p class="card-text">City Guessing Game is an interactive game where players are tasked with guessing the name of a city in Myanmar. The game presents a series of images that represent different cities, and players need to use their knowledge and deductive skills to identify the correct city. <a href="City_Guessing_Game_Review.html">Read more...</a></p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="rating">
+                                        <h6>Rating:</h6>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>                                        
+                                        <i class="fas fa-star checked" style="color: orange;"></i>      
+                                        <i class="fas fa-star" style="color: black;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="comment">                    
+                                        <div class="mb-3 mt-3">
+                                            <label for="comment">Comments:</label>
+                                            <textarea class="form-control" name="" id="" rows="5"></textarea><br>
+                                            <button type="submit" class="btn btn-primary">Submit</button>   
+                                            <button type="submit" class="btn btn-primary"><a href="City_Guessing_Game.html" style="color: white;text-decoration: none;">Play Now</a></button>            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="assets/images/daijin.gif" class="card-img" alt="Game Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Daijin Jump Game</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Genre: Jump Game</h6>
+                            <p class="card-text">Daijin Jump Game is an exciting jump game where you must navigate your character without hitting any blocks. The objective is to jump with precision and avoid obstacles while collecting coins along the way. <a href="Daijin_Jump_Review.html">Read more...</a></p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="rating">
+                                        <h6>Rating:</h6>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>                                        
+                                        <i class="fas fa-star checked" style="color: orange;"></i>      
+                                        <i class="fas fa-star checked" style="color: orange;"></i>      
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="comment">                    
+                                        <div class="mb-3 mt-3">
+                                            <label for="comment">Comments:</label>
+                                            <textarea class="form-control" name="" id="" rows="5"></textarea><br>
+                                            <button type="submit" class="btn btn-primary">Submit</button>   
+                                            <button type="submit" class="btn btn-primary"><a href="daijin_jump.html" style="color: white;text-decoration: none;">Play Now</a></button>            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="assets/images/mathgame.png" class="card-img" alt="Game Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Math Game</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Genre: Mathematics Game</h6>
+                            <p class="card-text">Coming Soon...</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="rating">
+                                        <h6>Rating:</h6>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                        <i class="fas fa-star checked" style="color: orange;"></i>                                        
+                                        <i class="fas fa-star checked" style="color: orange;"></i>      
+                                        <i class="fas fa-star checked" style="color: orange;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="comment">                    
+                                        <div class="mb-3 mt-3">
+                                            <label for="comment">Comments:</label>
+                                            <textarea class="form-control" name="" id="" rows="5"></textarea><br>
+                                            <button type="submit" class="btn btn-primary">Submit</button>   
+                                            <button type="submit" class="btn btn-primary"><a href="mathgame.html" style="color: white;text-decoration: none;">Play Now</a></button>            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </section><!-- End Contact Section -->
+    
+    </main><!-- End #main -->
+
+    <footer id="footer">        
+        <footer class="bg-dark text-white text-center py-4" id="footer">
+            <div class="container">
+                <div class="row">                    
+                    <div class="col-md-12">
+                        <div class="social-icons">
+                            <a href="#" target="_blank" rel="nofollow"><i class="fab fa-facebook-f" id="facebook"></i></a>
+                            <a href="#" target="_blank" rel="nofollow"><i class="fab fa-twitter" id="twitter"></i></a>
+                            <a href="#" target="_blank" rel="nofollow"><i class="fab fa-instagram" id="instagram"></i></a>
+                            <a href="#" target="_blank" rel="nofollow"><i class="fab fa-youtube" id="youtube"></i></a>
+                            <a href="#" target="_blank" rel="nofollow"><i class="fab fa-github" id="github"></i></a>                            
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-expand-md justify-content-center">
+                            <ul class="navbar-nav" id="navbar">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Games</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-12">
+                        <p>&copy; 2023 The Irish. All rights reserved | Designed by <a href="" class="link">Alvin</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>                
+    </footer>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.slim.min.js"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    
+</body>
+</html>

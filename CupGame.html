@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cup Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+        }
+
+        #cup-container {
+            margin-top: 50px;
+        }
+
+        .cup {
+            display: inline-block;
+            width: 120px;
+            height: 180px;
+            background-color: #eaeaea;
+            border: 2px solid #888888;
+            margin: 0 20px;
+            cursor: pointer;
+        }
+        
+        .ball {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #00FF00;
+        }
+        
+        .square {
+            width: 50px;
+            height: 50px;
+            background-color: #FF0000;
+        }
+
+        #restart-button {
+            display: none;
+        }
+
+        #start-button,
+        #restart-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<h1>Cup Game</h1>
+<div id="cup-container">
+    <div class="cup"></div>
+    <div class="cup"></div>
+    <div class="cup"></div>
+</div>
+<button id="start-button">Start Game</button>
+<button id="restart-button">Restart</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var cups = $(".cup");
+        var startButton = $("#start-button");
+        var restartButton = $("#restart-button");
+        var ballIndex;
+
+        startButton.click(function () {
+            restartGame();
+            ballIndex = Math.floor(Math.random() * 3);
+            startButton.hide();
+            attachCupClickListeners();
+        });
+
+        restartButton.click(function () {
+            restartGame();
+        });
+
+        function attachCupClickListeners() {
+            cups.click(function () {
+                var index = parseInt(cups.index(this), 10) + 1; // Add 1 to match the cupIndex
+                openCup(index);
+            });
+        }
+
+        function openCup(index) {
+            cups.each(function (cupIndex) {
+                var cup = $(this);
+                if (cupIndex + 1 === index) { // Modify the comparison here
+                    if (cupIndex === ballIndex) {
+                        cup.addClass("ball");
+                        cup.text("");
+                        alert("You Won!");
+                        startButton.show();
+                    } else {
+                        cup.addClass("square");
+                        alert("You Lose, Try Again!");
+                        restartButton.show();
+                    }
+                } else {
+                    cup.css("pointer-events", "none");
+                }
+            });
+        }
+
+        function restartGame() {
+            cups.off("click");
+            cups.removeClass("ball square");
+            cups.css("background-color", "#eaeaea"); // Reset cup color
+            cups.css("pointer-events", "auto");
+            restartButton.hide();
+            startButton.show();
+        }
+    });
+</script>
+</body>
+</html>

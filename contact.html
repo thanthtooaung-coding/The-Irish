@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Irish.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">        
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Jquery -->    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="assets/js/scrollToTop.js"></script>
+
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container pt-2 pb-2 col-12">
+                <a class="navbar-brand" href="#">The Irish.</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto col-sm col-lg-7">
+                        <li class="nav-item pr-5">
+                            <a class="nav-link" href="homepage.html">Home</a>
+                        </li>
+                        <li class="nav-item pr-5">
+                            <a class="nav-link" href="games.html">Games</a>
+                        </li>
+                        <li class="nav-item pr-5">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item active pr-5">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <a class="nav-link d-none d-lg-inline btn" id="signin" href="login.html" style="color: white; background-color:#3ded97;">Sign in</a>
+                </div>
+                <!-- <a class="nav-link d-lg-none" href="#">Sign in</a> -->
+            </div>
+        </nav>
+    </header>
+
+    <main style="background: white;">
+        <section class="section pt-5 pb-5">
+            <div class="container-fluid">
+                <div class="row mb-5 ml-5">
+                    <div class="col-md-12 text-center">
+                        <h2>Contact Us</h2>
+                    </div>
+                </div>     
+            <div class="row">
+                <div class="col-lg-6">
+                <div class="mb-4 mb-lg-0">                
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.7678783749107!2d96.17471827405903!3d16.88737331701918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c19377e0a26b79%3A0x263eb19cb5088366!2sPearl%20Yadana%20Vocational%20Training%20Center!5e0!3m2!1sen!2smm!4v1685639694798!5m2!1sen!2smm" width="100%" height="340px" style="border:0;" allowfullscreen></iframe>
+                </div>
+            </div>  
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-md-4 info">
+                    <!--https://icons.getbootstrap.com/icons/geo-alt-fill/ -->
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Yangon</span>
+                    </div>
+                    <div class="col-md-5 info">
+                        <i class="bi bi-envelope"></i>
+                        <span>pearlyadana15@gmail.com</span>
+                    </div>
+                        <div class="col-md-3 info">
+                        <i class="bi bi-phone"></i>
+                        <span>+95794774518</span>                  
+                    </div>
+                </div>
+                <br>                
+                <form onsubmit="return validate()">
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required autocomplete="off">
+                        </div>                        
+                        <div class="form-group col-lg-6 mt-3 mt-lg-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required autocomplete="off">
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Message" required autocomplete="off"></textarea>
+                    </div>
+                    <div class="my-3">
+                        <div class="loading"></div>
+                        <div class="error-message"></div>
+                        <div class="sent-message"></div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" title="Send Message" id="sent">Send Message</button>
+                    </div>
+                </form>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+  
+    </main><!-- End #main -->
+
+    <footer id="footer">        
+        <footer class="bg-dark text-white text-center py-4" id="footer">
+            <div class="container">
+                <div class="row">                    
+                    <div class="col-md-12">
+                        <div class="social-icons">
+                            <a href="#" target="_blank" rel="nofollow"><i class="fab fa-facebook-f" id="facebook"></i></a>
+                            <a href="#" target="_blank" rel="nofollow"><i class="fab fa-twitter" id="twitter"></i></a>
+                            <a href="#" target="_blank" rel="nofollow"><i class="fab fa-instagram" id="instagram"></i></a>
+                            <a href="#" target="_blank" rel="nofollow"><i class="fab fa-youtube" id="youtube"></i></a>
+                            <a href="#" target="_blank" rel="nofollow"><i class="fab fa-github" id="github"></i></a>                            
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-expand-md justify-content-center">
+                            <ul class="navbar-nav" id="navbar">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Games</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-12">
+                        <p>&copy; 2023 The Irish. All rights reserved | Designed by <a href="" class="link">Alvin</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>                
+    </footer>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.slim.min.js"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <script src="assets/js/contact.js"></script>
+    
+</body>
+</html>
